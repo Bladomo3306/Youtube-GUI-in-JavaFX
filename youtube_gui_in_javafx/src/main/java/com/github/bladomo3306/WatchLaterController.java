@@ -3,7 +3,8 @@ package com.github.bladomo3306;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class PrimaryController {
+public class WatchLaterController
+ {
 
     @FXML
     private void switchToMusic() throws IOException {
@@ -16,7 +17,7 @@ public class PrimaryController {
     }
 
     @FXML
-    private void switchToWatchLater() throws IOException {
-        App.setRoot("watchLater");
+    private void switchToPrimary() throws IOException {
+        App.setRoot("primary");
     }
 }
