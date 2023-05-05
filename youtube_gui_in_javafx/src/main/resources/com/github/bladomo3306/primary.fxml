@@ -14,64 +14,74 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1015.0" prefWidth="1920.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1015.0" prefWidth="1920.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.bladomo3306.PrimaryController">
    <top>
       <HBox prefHeight="25.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="676.0">
+            <HBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="598.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="319.0">
+                  <HBox prefHeight="64.0" prefWidth="251.0">
                      <children>
                         <Label />
-                        <ImageView fitHeight="80.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="69.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Images/free-youtube-icon-141-thumb.png" />
+                              <Image url="@Images/free-youtube-icon-141-thumb.png" />
                            </image></ImageView>
                      </children>
                   </HBox>
                </children>
             </HBox>
-            <TextField prefHeight="75.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
+            <TextField focusTraversable="false" prefHeight="17.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
                <font>
-                  <Font size="36.0" />
+                  <Font size="23.0" />
                </font>
             </TextField>
+            <ImageView fitHeight="75.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/SearchIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Mic-Circle-Icon.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </top>
    <left>
       <VBox prefHeight="938.0" prefWidth="293.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Home" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Shorts" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Subscriptions" textFill="WHITE" />
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Library" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="History" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#switchToWatchLater" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Watch later" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Liked videos" textFill="WHITE" />
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
             <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: black;" text="Subscriptions" textFill="WHITE">
                <font>
-                  <Font size="21.0" />
+                  <Font size="23.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#switchToMusic" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Music" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Sports" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#switchToGame" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Gaming" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Live" textFill="WHITE" />
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
             <Label text="      Explore" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Live" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Gaming" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Sports" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Learning" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Fashion &amp; Beauty" textFill="WHITE" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Podcasts" textFill="WHITE" />
          </children>
       </VBox>
    </left>
@@ -98,10 +108,10 @@
                               <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="All" textFill="WHITE" />
                            </children>
                         </HBox>
-                        <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Music" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#switchToMusic" style="-fx-background-color: dimgrey;" text="Music" textFill="WHITE" />
                         <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="139.0">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Gaming" textFill="WHITE" />
+                              <Button mnemonicParsing="false" onAction="#switchToGame" style="-fx-background-color: dimgrey;" text="Gaming" textFill="WHITE" />
                            </children>
                         </HBox>
                      </children>
@@ -110,7 +120,7 @@
                      <children>
                         <ImageView fitHeight="254.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Images/Thumbnails/AdCapture.PNG" />
+                              <Image url="@Images/Thumbnails/AdCapture.PNG" />
                            </image>
                         </ImageView>
                      </children>
@@ -149,7 +159,7 @@
                      <children>
                         <ImageView fitHeight="254.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Images/Thumbnails/PrideandPrejudice.PNG" />
+                              <Image url="@Images/Thumbnails/PrideandPrejudice.PNG" />
                            </image>
                         </ImageView>
                      </children>
@@ -177,7 +187,7 @@
                      <children>
                         <ImageView fitHeight="258.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Images/Thumbnails/MacandCheeseCake.PNG" />
+                              <Image url="@Images/Thumbnails/MacandCheeseCake.PNG" />
                            </image>
                         </ImageView>
                      </children>
@@ -188,7 +198,7 @@
                <children>
                   <ImageView fitHeight="261.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Images/Thumbnails/GoProChallenge.PNG" />
+                        <Image url="@Images/Thumbnails/GoProChallenge.PNG" />
                      </image>
                   </ImageView>
                </children>
@@ -197,7 +207,7 @@
                <children>
                   <ImageView fitHeight="255.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Images/Thumbnails/Busted.PNG" />
+                        <Image url="@Images/Thumbnails/Busted.PNG" />
                      </image>
                   </ImageView>
                </children>
@@ -206,7 +216,7 @@
                <children>
                   <ImageView fitHeight="266.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Images/Thumbnails/LofiandHip-Hop.PNG" />
+                        <Image url="@Images/Thumbnails/LofiandHip-Hop.PNG" />
                      </image>
                   </ImageView>
                </children>
@@ -215,7 +225,7 @@
                <children>
                   <ImageView fitHeight="260.0" fitWidth="351.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Images/Thumbnails/NBAstuff.PNG" />
+                        <Image url="@Images/Thumbnails/NBAstuff.PNG" />
                      </image>
                   </ImageView>
                </children>
@@ -224,7 +234,7 @@
                <children>
                   <ImageView fitHeight="263.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Images/Thumbnails/EasySpeezy.PNG" />
+                        <Image url="@Images/Thumbnails/EasySpeezy.PNG" />
                      </image>
                   </ImageView>
                </children>

@@ -3,11 +3,11 @@ package com.github.bladomo3306;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class PrimaryController {
+public class MusicController {
 
     @FXML
-    private void switchToMusic() throws IOException {
-        App.setRoot("music");
+    private void switchToPrimary() throws IOException {
+        App.setRoot("primary");
     }
 
     @FXML
