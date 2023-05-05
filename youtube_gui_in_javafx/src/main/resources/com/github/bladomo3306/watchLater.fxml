@@ -14,28 +14,39 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1015.0" prefWidth="1920.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.bladomo3306.GameController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1015.0" prefWidth="1920.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.bladomo3306.WatchLaterController">
    <top>
       <HBox prefHeight="25.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="676.0">
+            <HBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="598.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="319.0">
+                  <HBox prefHeight="64.0" prefWidth="251.0">
                      <children>
                         <Label />
-                        <ImageView accessibleRole="BUTTON" fitHeight="80.0" fitWidth="200.0" onMouseClicked="#switchToPrimary" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleRole="BUTTON" fitHeight="69.0" fitWidth="64.0" onMouseClicked="#switchToPrimary" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Images/free-youtube-icon-141-thumb.png" />
-                           </image></ImageView>
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                </children>
             </HBox>
-            <TextField focusTraversable="false" prefHeight="75.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
+            <TextField focusTraversable="false" prefHeight="17.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
                <font>
-                  <Font size="37.0" />
+                  <Font size="23.0" />
                </font>
             </TextField>
+            <ImageView fitHeight="75.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/SearchIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Mic-Circle-Icon.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </top>
@@ -58,7 +69,7 @@
             </Button>
             <Button mnemonicParsing="false" onAction="#switchToMusic" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Music" textFill="WHITE" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Sports" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Gaming" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#switchToGame" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Gaming" textFill="WHITE" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Live" textFill="WHITE" />
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
             <Label text="      Explore" textFill="WHITE">
@@ -91,144 +102,32 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="39.0" prefWidth="407.0">
-                     <children>
-                        <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="141.0">
-                           <children>
-                              <Button mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: dimgrey;" text="All" textFill="WHITE" />
-                           </children>
-                        </HBox>
-                        <Button mnemonicParsing="false" onAction="#switchToMusic" style="-fx-background-color: dimgrey;" text="Music" textFill="WHITE" />
-                        <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="139.0">
-                           <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Gaming" textFill="WHITE" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_CENTER" prefHeight="285.0" prefWidth="407.0">
-                     <children>
-                        <ImageView fitHeight="254.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Game-Thumbnails/Bloxburg.PNG" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-               <children>
-                  <HBox prefHeight="50.0" prefWidth="407.0">
-                     <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <HBox prefHeight="45.0" prefWidth="218.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Lo-fi" textFill="WHITE" />
-                                    <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="54.0" />
-                                    <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="NBA" textFill="WHITE" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <HBox prefHeight="45.0" prefWidth="217.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefWidth="55.0" style="-fx-background-color: dimgrey;" text="Cars" textFill="WHITE" />
-                                    <HBox prefHeight="45.0" prefWidth="53.0" />
-                                    <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Teams" textFill="WHITE" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_CENTER" prefHeight="273.0" prefWidth="407.0">
-                     <children>
-                        <ImageView fitHeight="254.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Game-Thumbnails/Builderbase2.PNG" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="220.0" text="Watch later" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="37.0" prefWidth="258.0" text="No videos  No views  Updated today" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Circled-triple-dot.png" />
+                     </image>
+                  </ImageView>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox prefHeight="100.0" prefWidth="108.0">
-                           <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Recent" textFill="WHITE" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="106.0">
-                           <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Pop" textFill="WHITE" />
-                           </children>
-                        </HBox>
-                        <Button mnemonicParsing="false" style="-fx-background-color: dimgrey;" text="Jazz" textFill="WHITE" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_CENTER" prefHeight="302.0" prefWidth="407.0">
-                     <children>
-                        <ImageView fitHeight="258.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Game-Thumbnails/Hydroneer.PNG" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
+                  <Label prefHeight="98.0" prefWidth="228.0" text="No videos in this playlist yet" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
-               <children>
-                  <ImageView fitHeight="261.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Game-Thumbnails/InfiniteMoneyBloxFruit.PNG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-               <children>
-                  <ImageView fitHeight="255.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Game-Thumbnails/MinecraftBosses.PNG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <ImageView fitHeight="266.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Game-Thumbnails/penguin0.PNG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <children>
-                  <ImageView fitHeight="260.0" fitWidth="351.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Game-Thumbnails/ShoeNoteblocks.PNG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <children>
-                  <ImageView fitHeight="263.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Game-Thumbnails/TearsOfTheKingdom.PNG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
          </children>
       </GridPane>
    </center>

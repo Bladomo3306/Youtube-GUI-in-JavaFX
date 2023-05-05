@@ -18,24 +18,35 @@
    <top>
       <HBox prefHeight="25.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="676.0">
+            <HBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="598.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="319.0">
+                  <HBox prefHeight="64.0" prefWidth="251.0">
                      <children>
                         <Label />
-                        <ImageView accessibleRole="BUTTON" fitHeight="80.0" fitWidth="200.0" onMouseClicked="#switchToPrimary" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleRole="BUTTON" fitHeight="69.0" fitWidth="64.0" onMouseClicked="#switchToPrimary" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Images/free-youtube-icon-141-thumb.png" />
-                           </image></ImageView>
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                </children>
             </HBox>
-            <TextField focusTraversable="false" prefHeight="75.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
+            <TextField focusTraversable="false" prefHeight="17.0" prefWidth="583.0" promptText="search" style="-fx-background-color: black;">
                <font>
-                  <Font size="37.0" />
+                  <Font size="23.0" />
                </font>
             </TextField>
+            <ImageView fitHeight="75.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/SearchIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Mic-Circle-Icon.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </top>
@@ -48,7 +59,7 @@
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Library" textFill="WHITE" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="History" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Watch later" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#switchToWatchLater" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Watch later" textFill="WHITE" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="232.0" style="-fx-background-color: black;" text="Liked videos" textFill="WHITE" />
             <Line endX="118.5" startX="-100.0" stroke="#5e5959" />
             <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: black;" text="Subscriptions" textFill="WHITE">
